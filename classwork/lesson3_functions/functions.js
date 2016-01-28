@@ -89,21 +89,19 @@ var isDraw = false;
 
 var player1 = {
 	name: 'Russell',
-	getHand: function() {
-		return hands[parseInt(Math.random()*10)%3];
-	}
+	hand: getHand();
+	wins: 0;
 }
 
 var player2 = {
 	name: 'Wilson',
-	getHand: function() {
-		return hands[parseInt(Math.random()*10)%3];
-	}
+	hand: getHand();
+	wins: 0;
 }
 
-// function getHand() {
-// 	return hands[parseInt(Math.random()*10)%3];
-// }
+function getHand() {
+	return hands[parseInt(Math.random()*10)%3];
+}
 
 function playRound(argPlayerObj1, argPlayerObj2) {
 	hand1 = argPlayerObj1.getHand();
