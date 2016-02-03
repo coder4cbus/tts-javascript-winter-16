@@ -26,7 +26,13 @@ var runningBacks = players.filter(function(item) {
 	return item.position === "RB"; //&& item.touchdowns > 5;
 });
 
-// console.log(runningBacks);
+var runningBacksWith5Touchdowns = players.filter(function(item) {
+	return item.position === "RB" && item.touchdowns > 5;
+}).map(function(player) {
+	return player.firstName + " " + player.lastName;
+});
+
+console.log(runningBacksWith5Touchdowns);
 
 // var lastNames = players.map(function(item) {
 // 	return item.lastName;
